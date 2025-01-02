@@ -114,12 +114,8 @@
             useropen();
             document.getElementById(z).style.backgroundColor = "darkgrey" ;
             location_user = z;
-            let z1 = z.slice(1,z.length);
-            let z2 = parseInt(z1,10);
             if(clicktime == 0){
                 firstclick(z);
-            }else if((size_s[z2] == 0) && (size_coucolet[z2] == 0)){
-                coucolet_while_for_firstclick(z);
             }
         }
         function collor() {
@@ -241,6 +237,11 @@
             collor();
             coucolet();
             useropen();
+            let z1 = location_user.slice(1,location_user.length);
+            let z2 = parseInt(z1,10);
+            if((size_s[z2] == 0) && (size_coucolet[z2] == 0)){
+                coucolet_while_for_firstclick(z);
+            }
         }
         function coucolet_while_for_firstclick(x){
             let xnumber = x.slice(1,x.length);
